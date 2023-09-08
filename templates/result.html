@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container pt-5">
+        <div class="row">
+
+        <h1>Prediction Results</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">PassengerId</th>
+                <th scope="col">Pclass</th>
+                <th scope="col">Age</th>
+                <th scope="col">SibSp</th>
+                <th scope="col">Fare</th>
+                <th scope="col">Parch</th>
+                <th scope="col">C</th>
+                <th scope="col">S</th>
+                <th scope="col">Q</th>
+                <th scope="col">male</th>
+                <th scope="col">female</th>
+                <th scope="col">Result</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for dataa in dataset %}
+                    <tr>
+                    <th scope="row">{{ dataa.id }}</th>
+                    <th>{{ dataa.PassengerId }}</th>
+                    <td>{{ dataa.Pclass }}</td>
+                    <td>{{ dataa.Age }}</td>
+                    <td>{{ dataa.SibSp }}</td>
+                    <td>{{ dataa.Fare }}</td>
+                    <td>{{ dataa.Parch }}</td>
+                    <td>{{ dataa.C }}</td>
+                    <td>{{ dataa.S }}</td>
+                    <td>{{ dataa.Q }}</td>
+                    <td>{{ dataa.male }}</td>
+                    <td>{{ dataa.female }}</td>
+                    <td>{{ dataa.classification }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
