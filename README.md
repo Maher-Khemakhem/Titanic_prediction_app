@@ -19,3 +19,5 @@ pip install -r requirements.txt
 ```bash
 python manage.py runserver
 ```
+You can get the data from this link
+[1]: https://www.kaggle.com/competitions/titanic/data
